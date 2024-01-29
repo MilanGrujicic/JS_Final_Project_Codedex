@@ -1,3 +1,16 @@
+:root {
+  --green: #00ff9f;
+  --yellow: #f8ff1d;
+  --purple: #9c7bff;
+  --blue: #4b69fe;
+  --light-purple: #f8e0fa;
+  --light-green: #b2e2bb;
+  --light-yellow: #fbf4a0;
+  --shadow-1: 1.5vmin 1.5vmin #000;
+  --border: solid 1vmin #000;
+  --border-small: solid 0.65vmin #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +18,7 @@
 }
 
 body {
-  background-image: url(https://images.hdqwalls.com/download/tropical-paradise-4k-jf-2880x1800.jpg);
+  background: var(--purple);
   background-repeat: no-repeat;
   background-size: cover;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -13,11 +26,8 @@ body {
 }
 
 main {
-  background-color: rgba(227, 193, 173, 0.85);
   position: relative;
   top: 30%;
-  border: 1px solid;
-  border-radius: 5px;
   padding: 2em;
   width: 45%;
   margin: auto;
@@ -49,6 +59,14 @@ h1 {
   flex-direction: column;
   place-items: center;
   height: 250px;
+  background: var(--green);
+  border-radius: 4vmin;
+  box-shadow: var(--shadow-1);
+  border: var(--border);
+  position: relative;
+  overflow: visible;
+  padding-block: 4vmin;
+  margin: auto;
 }
 
 #weather-search {
