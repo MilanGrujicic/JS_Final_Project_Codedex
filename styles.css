@@ -1,11 +1,6 @@
 :root {
   --green: #00ff9f;
-  --yellow: #f8ff1d;
   --purple: #9c7bff;
-  --blue: #4b69fe;
-  --light-purple: #f8e0fa;
-  --light-green: #b2e2bb;
-  --light-yellow: #fbf4a0;
   --shadow-1: 1.5vmin 1.5vmin #000;
   --border: solid 1vmin #000;
   --border-small: solid 0.65vmin #000;
@@ -38,7 +33,7 @@ h1 {
 }
 
 #search {
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px 5px 5px 5px;
   padding: 10px;
   font-size: 16px;
   width: 70%;
@@ -47,11 +42,27 @@ h1 {
 }
 
 #submit {
-  border-radius: 0 5px 5px 0;
-  padding: 10px;
+  --borderColor: black;
+  --fillColor: white;
+  --textColor: black;
+  
+  color: var(--textColor);
+  appearance: none;
+  outline: none;
+  border: 2px solid var(--borderColor);
   font-size: 16px;
-  width: 5em;
-  cursor: pointer;
+  padding: 8px 12px 8px;
+  box-shadow: 2px 2px 0px 0px var(--borderColor);
+  border-radius: 8px;
+  background-color: var(--fillColor);
+  
+  &:hover,
+  &:focus {
+    box-shadow: 3px 3px 0px 0px var(--borderColor);
+  }
+  &:active {
+    box-shadow: 1px 1px 0px 0px var(--borderColor);
+  }
 }
 
 #weather-wrapper {
@@ -73,4 +84,8 @@ h1 {
   display: flex;
   width: 50%;
   gap: 5px;
+}
+
+#weather-data {
+  margin-top:5px;
 }
